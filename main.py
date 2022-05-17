@@ -69,7 +69,7 @@ def add_client():
 
 
 @app.route('/delete/<nom>', methods=['DELETE'])
-def delete_client(nom):
+def delete_patient(nom):
     exist = collection.find_one({'nom':nom})
     if exist:
         collection.delete_one({'nom':nom})
